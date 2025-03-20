@@ -91,7 +91,7 @@ def load_data(
         download_data(path)
 
     # create datasets
-    train_dataset: Dataset = ImagenetteDataset(f"{path}/train")
+    train_dataset: Dataset = ImagenetteDataset(f"{path}/val")
     val_dataset: Dataset
     train_dataset, val_dataset = random_split(train_dataset, [0.8, 0.2])
     test_dataset: Dataset = ImagenetteDataset(f"{path}/val")
